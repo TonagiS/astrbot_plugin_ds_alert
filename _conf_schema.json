@@ -1,0 +1,63 @@
+{
+  "enable": {
+    "type": "bool",
+    "description": "总开关",
+    "default": true
+  },
+  "keywords": {
+    "type": "list",
+    "description": "命中就提高接话概率的关键词（不区分大小写，包含即命中）",
+    "default": [
+      "ds",
+      "ds娘",
+      "d娘",
+      "deepseek",
+      "深度求索",
+      "肥鱼",
+      "大肥鱼",
+      "鲸鱼娘",
+      "鲸鱼",
+      "白饭"
+    ]
+  },
+  "groups": {
+    "type": "list",
+    "description": "生效的群号或 umo，留空=所有群",
+    "default": []
+  },
+  "probability": {
+    "type": "float",
+    "description": "命中后真正接话的概率（1=必接）",
+    "default": 0.8
+  },
+  "cooldown_seconds": {
+    "type": "int",
+    "description": "同一个群两次主动接话的最小间隔（秒）",
+    "default": 240
+  },
+  "max_per_hour": {
+    "type": "int",
+    "description": "同一个群每小时最多主动接话几次",
+    "default": 5
+  },
+  "image_check": {
+    "type": "bool",
+    "description": "文字没命中时，允许把图片丢给视觉模型判断是否相关（每张图一次调用，有成本）",
+    "default": true
+  },
+  "image_provider_id": {
+    "type": "string",
+    "description": "用哪个提供商看图，留空=当前默认提供商",
+    "default": "deepseek/deepseek-flash"
+  },
+  "image_probability": {
+    "type": "float",
+    "description": "纯图（没配文字）的消息，送视觉模型判定的概率；带文字的图一律都看",
+    "default": 0.3
+  },
+  "image_min_chars": {
+    "type": "int",
+    "description": "文字达到这么多字，就算“带文字”，图一律都看",
+    "default": 2
+  }
+}

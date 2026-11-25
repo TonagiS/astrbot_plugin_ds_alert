@@ -1,0 +1,9 @@
+name: astrbot_plugin_ds_alert
+display_name: DS 关键词接话
+author: Tonagi
+desc: 群里出现 ds / DS娘 / 肥鱼 相关关键词或图片时，把主动接话的概率从 1% 提上来（命中后按被 @ 处理，走原有 LLM 链路）。
+version: 1.0.0
+astrbot_version: ">=4.22.0"
+support_platforms:
+  - aiocqhttp
+repo: "https://github.com/TonagiS/astrbot_plugin_ds_alert"
